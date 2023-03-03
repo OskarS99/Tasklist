@@ -1,14 +1,10 @@
 .flex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #ededed;
+   background-color: #ededed;
     width: 80%;
-    
     margin: 100px auto;
-    padding: 5px;
-    align-content: center;
-}
+   }
 
 .flex__item {
     
