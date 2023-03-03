@@ -44,14 +44,14 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-                 <li class="list__item"
+                 <li class="list__item "
                   ${task.done ? "class=\"list__item--done\"" : ""}
                   >
                    <button class="js-done list__button"></button>
                    ${task.content}
-                   <button class="js-remove list__button list__button--delete">
-                     
-                   </button>
+                   <div class="list__button--flex">
+                   <button class="js-remove list__button list__button--delete"></button>
+                   </div>
                  </li>
                `;
         }
