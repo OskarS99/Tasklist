@@ -1,19 +1,23 @@
 .form {
-    margin: 0 auto;
+ display: grid;
+ grid-template-columns: 1fr auto;
+ grid-gap: 20px;
 }
 
-
+@media (max-width: 1000px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
 
 .form__input {
-    max-width: 100%;
-    width: 1335px;
     padding: 10px;
-
+    border: 1px solid grey;
 }
 
 .form__button {
     border: none;
-    background-color: #22ab99;
+    background-color: #006aff;
     color: white;
-    padding: 12px;
+    padding: 10px;
 }
