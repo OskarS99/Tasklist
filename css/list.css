@@ -26,14 +26,15 @@
 
 .list__button--done {
     background-color: #04950d;
+    transition: 2s;
 }
 
 .list__button--done:hover {
-    background-color: #509c55;
+    background-color: #5f9d63;
 }
 
 .list__button--done:active {
-    background-color: #659868;
+    background-color: #729775;
 }
 
 
@@ -44,12 +45,13 @@
     background-position: center;
     color: white;
     background-color: red;
+    transition: 2s;
 }
 
 .list__button--delete:hover {
-    background-color: rgb(255, 60, 60);
+    background-color: hsl(0, 96%, 67%);
 }
 
 .list__button--delete:active {
-    background-color: rgb(240, 92, 92);
+    background-color: hwb(0 47% 4%);
 }
