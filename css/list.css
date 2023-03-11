@@ -26,11 +26,12 @@
     height: 30px;
     border: none;
     padding: 0;
+    transition: background 2s;
 }
 
 .list__button--done {
     background-color: #04950d;
-    transition: 2s;
+    
 }
 
 .list__button--done:hover {
@@ -49,7 +50,7 @@
     background-position: center;
     color: white;
     background-color: red;
-    transition: 2s;
+    
 }
 
 .list__button--delete:hover {
