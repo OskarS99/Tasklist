@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -22,12 +23,23 @@
     const toggleTaskDone = (taskIndex) => {
         [
             ...tasks.slice(0, taskIndex),
-            {...tasks[taskIndex], done: !tasks[taskIndex].done},
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
             ...tasks.slice(taskIndex + 1),
         ]
         console.log(toggleTaskDone());
         render()
     }
+
+    const hiddenAllDoneTasks = () => {
+
+    };
+
+    const markAsDoneAllTasks = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -43,6 +55,14 @@
                 toggleTaskDone(index);
             });
         });
+    }
+
+    const bindButtonsEvents = () => {
+
+    }
+
+    const renderButtons = () => {
+
     }
 
     const renderTasks = () => {
@@ -61,8 +81,10 @@
     }
 
     const render = () => {
+        renderButtons();
         renderTasks();
         bindEvents();
+        bindButtonsEvents();
     }
 
 
