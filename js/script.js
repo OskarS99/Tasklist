@@ -30,7 +30,9 @@
         render()
     }
 
-    const hiddenAllDoneTasks = () => {
+    const toggleHiddenDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
 
     };
 
@@ -39,6 +41,7 @@
             ...task,
             done: true,
         }));
+        render();
     };
 
     const bindEvents = () => {
