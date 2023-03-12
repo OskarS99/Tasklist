@@ -8,9 +8,7 @@
     text-decoration: line-through;
 }
 
-.list__item--hidden {
-    display: none;
-}
+
 
 .list__item {
     display: grid;
@@ -21,6 +19,9 @@
     border-bottom: 1px solid grey;
 }
 
+.list__item--hidden {
+    display: none;
+}
 .list__button {
     width: 30px;
     height: 30px;
