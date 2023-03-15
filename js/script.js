@@ -88,7 +88,8 @@
 
         buttonsElement.innerHTML = `
         <button class="buttons__style js-toggleHideDoneTasks">
-          ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+          ${hideDoneTasks ? "Pokaż" : "Ukryj"}
+           ukończone
         </button>
         <button class="buttons__style js-markAsDoneAllTasks"
          ${tasks.every(({ done }) => done) ? "disabled" : ""}>
@@ -100,8 +101,11 @@
 
     const renderTasks = () => {
         const taskToHTML = task => `
+
                  <li class="list__item ${task.done && hideDoneTasks  ? "list__item--hidden" : ""} js-tasks ">
-                   <button class="js-done list__button list__button--done">${task.done ? "✔" : ""}</button>
+                   <button class="js-done list__button list__button--done">
+                   ${task.done ? "✔" : ""}
+                   </button>
                     <span class="${task.done ? "list__content--done" : ""}"> 
                     ${task.content}
                     </span>
@@ -125,11 +129,14 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+
         const newTaskElement = document.querySelector(".js-newTask")
         const newTaskContent = newTaskElement.value.trim();
+
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
         }
+
         newTaskElement.value = "";
         newTaskElement.focus();
     };
